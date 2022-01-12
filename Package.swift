@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "THContactPicker",
-            targets: ["THContactPicker"]),
+            targets: ["THContactPicker"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,6 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "THContactPicker",
-            dependencies: [])
+            dependencies: [],
+            exclude: ["THContactPickerViewController.xib"])
     ]
 )
